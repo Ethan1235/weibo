@@ -29,9 +29,9 @@ class UsersController extends Controller
     {
         return view('users.show', compact('user'));
     }
-        public function index()
+    public function index()
     {
-        $users = User::all();
+        $users = User::paginate(6);
         return view('users.index', compact('users'));
     }
 
