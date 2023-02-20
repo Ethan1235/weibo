@@ -62,6 +62,9 @@ class User extends Authenticatable
         // $hash = $this-> profile;
         return "/picture/profile.jpg";
     }
-
+    public function statuses()
+    {
+        return $this->hasMany(Status::class);
+    }    
 
 }
